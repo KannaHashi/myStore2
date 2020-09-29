@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="container">
-        <div class="row">
+        <div class="row bahnschrift">
         @if($multi)
         @foreach($data as $datas)
             <div class="col-4 text-center p-3">
@@ -38,13 +38,11 @@
         @endforeach
         @elseif(!$multi)
             <div class="col-5 text-center">
-                <div class="card" style="background: url({{ Storage::url('img/'.$data->product_image) }}); max-width: 420px; height: 25em; background-size: cover, contain; background-repeat: no-repeat">
+                <div class="card rounded shadow p-3" style="background: url({{ Storage::url('img/'.$data->product_image) }}); max-width: 420px; height: 25em; background-size: 100% auto; background-position: center; background-repeat: no-repeat">
+                    <span class="bg-light badge rounded-pill" style='width: 50px; font-family: sans-serif'>Id : {{ $data->id }}</span>
                 </div>
             </div>
             <div class="col-7 py-3 pr-5">
-                <div class="form-group row mb-3">
-                    <label class="ml-2 col-2 text-capitalize col-form-label font-weight-light px-2 py-1" for="id">Id : {{ $data->id }}</label>
-                </div>
                 <div class="form-group mb-3">
                     <h3 class="text-capitalize">{{ $data->product_title }}</h3>
                 </div>
