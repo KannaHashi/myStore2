@@ -3,6 +3,14 @@
     transition: 0.4s;
 }
 
+.yes{
+    display: inline-block;
+}
+
+.colbox{
+    height: 100px;
+}
+
 .box{
     transition: 0.4s;
     font-family: bahnschrift;
